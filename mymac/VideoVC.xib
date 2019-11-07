@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15400" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15400"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="VideoVC" customModule="mymac" customModuleProvider="target">
+            <connections>
+                <outlet property="control" destination="oWw-d9-m6x" id="B4R-HK-wNt"/>
+                <outlet property="menuitems" destination="qYb-ok-NHv" id="N2E-6c-aMr"/>
+                <outlet property="videoplay" destination="cBl-WY-4wy" id="HYf-wc-jBR"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="900" height="680"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="cBl-WY-4wy" customClass="VersaPlayerView" customModule="VersaPlayer">
+                    <rect key="frame" x="0.0" y="0.0" width="900" height="680"/>
+                </customView>
+                <customView id="oWw-d9-m6x" customClass="VersaPlayerControls" customModule="VersaPlayer">
+                    <rect key="frame" x="48" y="239" width="803" height="203"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <subviews>
+                        <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qYb-ok-NHv">
+                            <rect key="frame" x="717" y="171" width="77" height="25"/>
+                            <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="SSc-GI-X5U" id="oaT-Qu-m2O">
+                                <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                                <menu key="menu" id="hNa-Ox-bVi">
+                                    <items>
+                                        <menuItem title="Item 1" state="on" id="SSc-GI-X5U"/>
+                                        <menuItem title="Item 2" id="2ky-Db-jmj"/>
+                                        <menuItem title="Item 3" id="Kvm-o9-Q3X"/>
+                                    </items>
+                                </menu>
+                            </popUpButtonCell>
+                        </popUpButton>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ecu-nO-9vL" customClass="VersaStatefulButton" customModule="VersaPlayer">
+                            <rect key="frame" x="360" y="59" width="84" height="85"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="80" id="Ge2-P2-jG1"/>
+                                <constraint firstAttribute="height" constant="80" id="rTF-Cr-duL"/>
+                            </constraints>
+                            <buttonCell key="cell" type="bevel" title="Button" bezelStyle="regularSquare" imagePosition="only" borderStyle="border" transparent="YES" imageScaling="proportionallyUpOrDown" inset="2" id="o91-R7-Bfv">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="image" keyPath="activeImage" value="NSTouchBarPauseTemplate"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="inactiveImage" value="NSTouchBarPlayTemplate"/>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="qYb-ok-NHv" firstAttribute="top" secondItem="oWw-d9-m6x" secondAttribute="top" constant="8" id="2xR-NP-07Z"/>
+                        <constraint firstAttribute="trailing" secondItem="qYb-ok-NHv" secondAttribute="trailing" constant="12" id="Mt5-RE-k1j"/>
+                        <constraint firstItem="ecu-nO-9vL" firstAttribute="centerX" secondItem="oWw-d9-m6x" secondAttribute="centerX" id="YP9-Cs-1QN"/>
+                        <constraint firstItem="ecu-nO-9vL" firstAttribute="centerY" secondItem="oWw-d9-m6x" secondAttribute="centerY" id="cVa-Fl-cgP"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="playPauseButton" destination="ecu-nO-9vL" id="qRs-6q-WZ2"/>
+                    </connections>
+                </customView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="cBl-WY-4wy" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="BJZ-fD-6aW"/>
+                <constraint firstItem="cBl-WY-4wy" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="CqU-jA-nJh"/>
+                <constraint firstAttribute="bottom" secondItem="cBl-WY-4wy" secondAttribute="bottom" id="L0R-lm-1Or"/>
+                <constraint firstItem="cBl-WY-4wy" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="OWy-Q8-5P0"/>
+                <constraint firstAttribute="bottom" secondItem="cBl-WY-4wy" secondAttribute="bottom" id="Oxc-Dg-jyt"/>
+                <constraint firstItem="cBl-WY-4wy" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="aAn-Br-Uxl"/>
+                <constraint firstAttribute="trailing" secondItem="cBl-WY-4wy" secondAttribute="trailing" id="eaH-jq-Feq"/>
+                <constraint firstAttribute="trailing" secondItem="cBl-WY-4wy" secondAttribute="trailing" id="oBr-AX-64M"/>
+            </constraints>
+            <point key="canvasLocation" x="-420" y="153"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="NSTouchBarPauseTemplate" width="11" height="30"/>
+        <image name="NSTouchBarPlayTemplate" width="14" height="30"/>
+    </resources>
+</document>

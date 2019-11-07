@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15400" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15400"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="myitem" customModule="mymac" customModuleProvider="target">
+            <connections>
+                <outlet property="img" destination="zkO-yH-x4I" id="QnA-tx-8Mt"/>
+                <outlet property="t1" destination="taG-tI-LxJ" id="yAT-Ku-PKx"/>
+                <outlet property="t2" destination="qQF-eZ-wVK" id="hXR-XN-xjG"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView focusRingType="exterior" id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="292" height="232"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box boxType="custom" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="Ttu-kW-iHC">
+                    <rect key="frame" x="0.0" y="0.0" width="292" height="232"/>
+                    <view key="contentView" id="msk-aX-xor">
+                        <rect key="frame" x="1" y="1" width="290" height="230"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zkO-yH-x4I">
+                                <rect key="frame" x="0.0" y="90" width="290" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="JV0-f3-VM8"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="NSCaution" id="LhC-nM-a8b"/>
+                            </imageView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="taG-tI-LxJ">
+                                <rect key="frame" x="-2" y="8" width="294" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Label" id="QwC-Sd-Ktb">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qQF-eZ-wVK">
+                                <rect key="frame" x="4" y="96" width="4" height="14"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" id="6kF-e6-fz5">
+                                    <font key="font" metaFont="message" size="11"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="taG-tI-LxJ" secondAttribute="bottom" constant="8" id="9wF-fJ-wDB"/>
+                            <constraint firstItem="qQF-eZ-wVK" firstAttribute="top" secondItem="msk-aX-xor" secondAttribute="top" constant="120" id="H0V-MD-pPa"/>
+                            <constraint firstItem="zkO-yH-x4I" firstAttribute="top" secondItem="msk-aX-xor" secondAttribute="top" id="I4p-JK-TAv"/>
+                            <constraint firstAttribute="trailing" secondItem="zkO-yH-x4I" secondAttribute="trailing" id="cVK-fm-zTf"/>
+                            <constraint firstItem="zkO-yH-x4I" firstAttribute="leading" secondItem="msk-aX-xor" secondAttribute="leading" id="ggr-tg-YAI"/>
+                            <constraint firstItem="taG-tI-LxJ" firstAttribute="leading" secondItem="msk-aX-xor" secondAttribute="leading" id="nRk-g2-sSE"/>
+                            <constraint firstItem="qQF-eZ-wVK" firstAttribute="leading" secondItem="msk-aX-xor" secondAttribute="leading" constant="6" id="w7a-IV-jzp"/>
+                            <constraint firstAttribute="trailing" secondItem="taG-tI-LxJ" secondAttribute="trailing" id="wWU-PL-Cwv"/>
+                        </constraints>
+                    </view>
+                    <color key="borderColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                    <color key="fillColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                </box>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Ttu-kW-iHC" secondAttribute="trailing" id="8Ah-2B-Tw2"/>
+                <constraint firstAttribute="bottom" secondItem="Ttu-kW-iHC" secondAttribute="bottom" id="Jdg-jY-DVr"/>
+                <constraint firstItem="Ttu-kW-iHC" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="VKy-9i-jcZ"/>
+                <constraint firstItem="Ttu-kW-iHC" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="wMn-aL-HxI"/>
+            </constraints>
+            <point key="canvasLocation" x="216" y="71"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="NSCaution" width="32" height="32"/>
+    </resources>
+</document>

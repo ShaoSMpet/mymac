@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15400" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15400"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView misplaced="YES" id="c22-O7-iKe" customClass="header" customModule="mymac" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="57"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GT2-aY-LyI">
+                    <rect key="frame" x="8" y="16" width="41" height="21"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="组头" id="TdW-zo-gLq">
+                        <font key="font" metaFont="system" size="18"/>
+                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="GT2-aY-LyI" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="10" id="M3O-gn-eVs"/>
+                <constraint firstAttribute="bottom" secondItem="GT2-aY-LyI" secondAttribute="bottom" constant="16" id="foW-bI-HJP"/>
+                <constraint firstItem="GT2-aY-LyI" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="20" id="xS3-BJ-pqS"/>
+            </constraints>
+            <connections>
+                <outlet property="title" destination="GT2-aY-LyI" id="IHB-WM-Vix"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="264"/>
+        </customView>
+    </objects>
+</document>
